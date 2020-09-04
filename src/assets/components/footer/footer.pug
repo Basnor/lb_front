@@ -1,0 +1,66 @@
+mixin footer({author = "default", info = "default", extra=false})
+    footer.footer
+
+        if extra
+            +about-us({
+                img: 'default_about_us_img.png',
+                desctiption: 'Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit. Nunc <br>non diam erat. In fringilla massa ut <br>nisi ullamcorper pellentesque.<br> Quiaque non lictus sem.',
+                link: '#'
+            })
+            +link-block([
+                {
+                    title: 'Lorem ipsum dolor sit',
+                    link: '#'
+                },
+                {
+                    title: 'Amet consecteutr',
+                    link: '#'
+                },
+                {
+                    title: 'Praesent vel sem id',
+                    link: '#'
+                },
+                {
+                    title: 'Curabitur hendrerit est',
+                    link: '#'
+                },
+                {
+                    title: 'Aliquam eget erat nec sapien',
+                    link: '#'
+                },
+                {
+                    title: 'Cras id augue nunc',
+                    link: '#'
+                },
+                {
+                    title: 'In nec justo non',
+                    link: '#'
+                },
+                {
+                    title: 'Vivamus millis enim ut',
+                    link: '#'
+                },
+                {
+                    title: 'Curabitur hendrerit est',
+                    link: '#'
+                }
+            ])
+            +from-blog([
+                {
+                    title: 'Post Title',
+                    data: 'Friday, 6th Aprill 2000',
+                    msg: 'Nulla facilici. Ut tringilla. Suspendisse <br>potenti. Nunc feugiat mi a tellus <br>consequat imperdiet.',
+                    link: '#'
+                },
+                {
+                    title: 'Post Title',
+                    data: 'Friday, 6th Aprill 2000',
+                    msg: 'Nulla facilici. Ut tringilla. Suspendisse <br>potenti. Nunc feugiat mi a tellus <br>consequat imperdiet.',
+                    link: '#'
+                }
+            ])
+            +contact-us()
+        
+        div
+            p(class="footer__author") !{author}
+            p(class="footer__info") !{info}
