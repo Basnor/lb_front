@@ -1,0 +1,14 @@
+mixin header({label = "default", description, links})
+    - 
+        
+    header.header
+        div
+            p(class="header__label") !{label}
+            p(class="header__description") !{description}
+
+        nav
+            ul.nav__links
+                each link in links
+                    li 
+                        - const {name, href} = link
+                        a(href=href) !{name}

@@ -1,10 +1,10 @@
 // Components
 @import "../assets/components/header/header.scss";
-@import "../assets/components/foother/foother.scss";
+@import "../assets/components/footer/footer.scss";
 @import "../assets/components/textfield/textfield.scss";
 
 // Styles for page
-@import "../views/palette.scss";
+@import "../views/home/palette.scss";
 
 * {
   margin: 0;
@@ -18,5 +18,9 @@ html {
 
 body {
   background-color: #fff;
+}
+
+p {
+  font-size: 5rem;
 }
 

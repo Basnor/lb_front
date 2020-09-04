@@ -30,7 +30,8 @@ const fileLoaders = () => {
         {
             loader: 'file-loader',
             options: {
-                name: '[path][name].[ext]'
+                name: '[name].[ext]',
+                outputPath: 'assets/img',
             }
         }
     ]
@@ -60,11 +61,19 @@ const plugins = () => {
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css'
-        })
+        }),
+        ...pages('home')
     ]
 
     return base
 }
+
+function pages() {
+    return [].map.call(arguments, page =>  new HtmlWebpackPlugin({
+      template: "./src/views/" + page + "/index.pug",
+      filename: page + ".html"
+    }))
+  }
 
 const config = {
     mode: 'development',
