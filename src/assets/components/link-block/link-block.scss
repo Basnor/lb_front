@@ -1,0 +1,29 @@
+.link-block {
+    margin: 1.5rem 0;
+
+    &__items {
+        list-style: none;
+    }
+
+    &__items > li {
+        display: block;
+        border-bottom: 1px solid #bebebe;
+        padding-bottom: 0.5rem;
+        padding-top: 1rem;
+
+        &:before {
+            content: "\00BB";
+            @include font-styles($base-font-family, 1.8rem, 0.05rem, none, #7e7e7e);
+        }
+    }
+
+    & > ul > li > a {
+        @include font-styles($base-font-family, 1.8rem, 0.05rem, none, red);
+        text-decoration: none;
+        margin-left: 0.8rem;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+}

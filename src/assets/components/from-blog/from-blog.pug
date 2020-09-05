@@ -1,0 +1,11 @@
+mixin from-blog(tweets)
+    h3 From the blog
+
+    .from-blog
+        each tweet in tweets 
+            .from-blog__tweet
+                - const {title, data, msg, href} = tweet
+                p.from-blog__tweet__title !{title}
+                p.from-blog__tweet__data !{data}
+                p.from-blog__tweet__msg !{msg}
+                a(href=href) Read more &raquo;

@@ -1,0 +1,9 @@
+mixin link-block(links)
+    h3 Link Block
+
+    .link-block
+        ul.link-block__items
+            each link in links
+                li 
+                    - const {title, href} = link
+                    a(href=href) !{title}

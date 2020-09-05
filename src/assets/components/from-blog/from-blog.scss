@@ -1,0 +1,34 @@
+.from-blog {
+    margin: 2.2rem 0;
+
+    &__tweet {
+        margin: 2.5rem 0;
+
+
+        &__title {
+            @include font-styles($base-font-family, 2.3rem, 0.08rem, none, #7e7e7e);
+            line-height: 2.3rem;
+        }
+    
+        &__data {
+            @include font-styles($base-font-family, 1.2rem, 0.18rem, none, #7e7e7e);
+            line-height: 2rem;
+        }
+
+        &__msg {
+            @include font-styles($base-font-family, 1.8rem, 0.05rem, none, #afafaf);
+            line-height: 2.5rem;
+        }
+    
+        & a {
+            @include font-styles($base-font-family, 1.8rem, 0.05rem, none, red);
+            line-height: 2.9rem;
+            text-decoration: none;
+    
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}

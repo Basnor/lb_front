@@ -5,6 +5,8 @@
 @import "../assets/components/header/header.scss";
 @import "../assets/components/footer/footer.scss";
 @import "../assets/components/textfield/textfield.scss";
+@import "../assets/components/link-block/link-block.scss";
+@import "../assets/components/from-blog/from-blog.scss";
 
 // Styles for page
 @import "../views/home/palette.scss";
@@ -41,4 +43,6 @@ p {
 
   border-radius: 1rem;
   background-color: #fff;
+
+  z-index: 2;
 }
