@@ -1,3 +1,6 @@
+// Mixins
+@import "./mixins.scss";
+
 // Components
 @import "../assets/components/header/header.scss";
 @import "../assets/components/footer/footer.scss";
@@ -17,10 +20,25 @@ html {
 }
 
 body {
-  background-color: #fff;
+  background-color: #fff; 
+  min-height: 100vh;
 }
 
 p {
-  font-size: 5rem;
+  font-size: 2rem;
 }
 
+.main-content {
+  min-height: 60vh;
+
+  margin-left: 2.6rem;
+  margin-right: 2.6rem;
+  margin-top: -10rem;
+
+  padding: 2.6rem;
+
+  position: relative;
+
+  border-radius: 1rem;
+  background-color: #fff;
+}
