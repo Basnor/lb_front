@@ -1,0 +1,8 @@
+mixin about-us({path, desctiption = "default", href='#'})
+    h3 About Us
+
+    .about-us
+        .about-us__img
+            img(src=path)
+        .about-us__desctiption !{desctiption}
+        a(href=href) Read more &raquo;

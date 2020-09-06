@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
 const isDevelopment = process.env.NODE_ENV === 'development'
@@ -31,13 +32,13 @@ const fileLoaders = () => {
             loader: 'file-loader',
             options: {
                 name: '[name].[ext]',
-                outputPath: 'assets/img',
             }
         }
     ]
 
     return loaders
 }
+
 
 const pugLoaders = () => {
     const loaders = [
@@ -61,6 +62,11 @@ const plugins = () => {
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: './src/assets/img', to: 'assets/img' },
+            ],
         }),
         ...pages('home')
     ]

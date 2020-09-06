@@ -1,12 +1,17 @@
 //include ../about-us/about-us
-//include ../contact-us/contact-us
 
 mixin footer({author = "default", info = "default", extra=false})
     footer.footer
 
         if extra
             .footer__content
-                div.footer__content__box Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                div.footer__content__box
+                    include /about-us/about-us
+                    +about-us({
+                        path: '/assets/img/default_about_us_img.png',
+                        desctiption: 'Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit. Nunc <br>non diam erat. In fringilla massa ut <br>nisi ullamcorper pellentesque.<br> Quiaque non lictus sem.',
+                        href: '#'
+                    })
                 div.footer__content__box
                     include /link-block/link-block
                     +link-block([
@@ -66,11 +71,6 @@ mixin footer({author = "default", info = "default", extra=false})
                 div.footer__content__box Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
         //
-            +about-us({
-                img: 'default_about_us_img.png',
-                desctiption: 'Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit. Nunc <br>non diam erat. In fringilla massa ut <br>nisi ullamcorper pellentesque.<br> Quiaque non lictus sem.',
-                link: '#'
-            })
             +contact-us()
         
         div.footer__info

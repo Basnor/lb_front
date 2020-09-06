@@ -1,0 +1,28 @@
+.about-us {
+    margin: 2.2rem 0;
+
+    &__desctiption {
+        @include font-styles($base-font-family, 1.8rem, 0.05rem, none, #afafaf);
+        line-height: 2.6rem;
+        padding-bottom: 1rem;
+        padding-top: 2.3rem;
+    }
+
+    &__img img {
+        width: 100%;
+        height: auto;
+        padding: 0.5rem;
+        border: 1px solid #afafaf;
+        margin-top: 0.5rem;
+    }
+
+    & a {
+        @include font-styles($base-font-family, 1.8rem, 0.05rem, none, red);
+        line-height: 2.9rem;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
