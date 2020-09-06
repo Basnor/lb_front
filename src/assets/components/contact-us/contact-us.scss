@@ -1,0 +1,90 @@
+$textfield-width: 30rem;
+$textfield-height-m:  4.4rem;
+$textfield-height-l:  15rem;
+$textfield-border-radius: 0.8rem;
+$textfield-default-color: #424242;
+
+
+
+@mixin box-styles ($width: $textfield-width, 
+                   $height: $textfield-height-m, 
+                   $box-sizing: border-box,
+                   $border-radius: $textfield-border-radius) {
+    width: $width;
+    height: $height;
+    box-sizing: $box-sizing;
+    border-radius: $border-radius;
+}
+
+.contact-us {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-gap: 1rem;
+
+    margin: 1.5rem 0;
+    margin-top: 2.5rem;
+
+    &__textfield {
+        @include box-styles();
+        background-color: #424242;
+
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        display: flex;
+        justify-content: space-between;
+
+        z-index: 1;
+    }
+
+    &__input {
+        @include font-styles($base-font-family, 1.8rem, 0.05rem, none, #fff);
+        background-color: #424242;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+
+        align-self: flex-start;
+        flex-grow: 1;
+
+        margin: 1rem 0;
+
+        z-index: 2;
+    
+        &::placeholder {
+            color: #fff;
+        }
+    }
+    
+    &__textarea {
+        @include box-styles($textfield-width, $textfield-height-l);
+        background-color: #424242;
+
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        display: flex;
+        justify-content: space-between;
+
+        z-index: 1;
+    }
+
+    & textarea {
+        resize: none;
+        height: 13rem;
+    }
+
+    &__btn {
+        width: 10rem;
+        height: $textfield-height-m;
+
+        background-color: red;
+        border-radius: $textfield-border-radius;
+        border: none;
+        cursor: pointer;
+
+        @include font-styles($base-font-family, 2rem, -0.02rem, uppercase, #fff);
+        font-weight: 700;
+    }
+}

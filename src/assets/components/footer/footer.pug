@@ -68,10 +68,9 @@ mixin footer({author = "default", info = "default", extra=false})
                             href: '#'
                         }
                     ])
-                div.footer__content__box Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-        //
-            +contact-us()
+                div.footer__content__box
+                    include /contact-us/contact-us
+                    +contact-us()
         
         div.footer__info
             p !{author}
