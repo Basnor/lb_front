@@ -18,9 +18,17 @@
         flex-wrap: wrap;
 
         &__box {
+            max-width: 30rem;
+
             display: inline-block;
-            max-width: 40rem;
+            flex-grow: 1;
+
             margin-bottom: 2.8rem;
+            margin-right: 2rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
 
     }

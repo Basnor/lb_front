@@ -26,12 +26,12 @@ const cssLoaders = extra => {
     return loaders
 }
 
-const fileLoaders = () => {
+const fontsLoaders = () => {
     const loaders = [
         {
             loader: 'file-loader',
             options: {
-                name: '[name].[ext]',
+                name: '/assets/fonts/[name].[ext]',
             }
         }
     ]
@@ -45,7 +45,7 @@ const pugLoaders = () => {
         {
             loader: 'pug-loader',
             options: {
-                root: path.resolve(__dirname, 'src/assets/components')
+                root: path.resolve(__dirname, 'src/components')
             }
         }
     ]
@@ -113,10 +113,9 @@ const config = {
                 use: cssLoaders('sass-loader')
             },
             {
-                test: /\.(png|jpg|svg|gif|ttf|woff)$/,
-                use: fileLoaders()
+                test: /\.(ttf|woff)$/,
+                use: fontsLoaders()
             }
-
         ]
     },
     devServer: {

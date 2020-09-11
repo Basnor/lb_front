@@ -6,14 +6,14 @@ mixin footer({author = "default", info = "default", extra=false})
         if extra
             .footer__content
                 div.footer__content__box
-                    include /about-us/about-us
+                    include /footer/about-us/about-us
                     +about-us({
-                        path: '/assets/img/default_about_us_img.png',
+                        path: './assets/img/default_about_us_img.png',
                         desctiption: 'Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit. Nunc <br>non diam erat. In fringilla massa ut <br>nisi ullamcorper pellentesque.<br> Quiaque non lictus sem.',
                         href: '#'
                     })
                 div.footer__content__box
-                    include /link-block/link-block
+                    include /footer/link-block/link-block
                     +link-block([
                         {
                             title: 'Lorem ipsum dolor sit',
@@ -53,7 +53,7 @@ mixin footer({author = "default", info = "default", extra=false})
                         }
                     ])
                 div.footer__content__box
-                    include /from-blog/from-blog
+                    include /footer/from-blog/from-blog
                     +from-blog([
                         {
                             title: 'Post Title',
@@ -69,7 +69,7 @@ mixin footer({author = "default", info = "default", extra=false})
                         }
                     ])
                 div.footer__content__box
-                    include /contact-us/contact-us
+                    include /footer/contact-us/contact-us
                     +contact-us()
         
         div.footer__info

@@ -1,13 +1,19 @@
 // Mixins
-@import "./mixins.scss";
+@import "./fonts.scss";
+
+// Colors
+@import "./colors.scss";
+
+// Spaces
+@import "./spaces.scss";
 
 // Components
-@import "../assets/components/header/header.scss";
-@import "../assets/components/footer/footer.scss";
-@import "../assets/components/link-block/link-block.scss";
-@import "../assets/components/from-blog/from-blog.scss";
-@import "../assets/components/about-us/about-us.scss";
-@import "../assets/components/contact-us/contact-us.scss";
+@import "../components/header/header.scss";
+@import "../components/footer/footer.scss";
+@import "../components/footer/link-block/link-block.scss";
+@import "../components/footer/from-blog/from-blog.scss";
+@import "../components/footer/about-us/about-us.scss";
+@import "../components/footer/contact-us/contact-us.scss";
 
 // Styles for page
 @import "../views/home/palette.scss";
@@ -28,6 +34,10 @@ body {
 }
 
 p {
+  font-family: liberation-serif, serif;
+  font-style: normal;
+  font-weight: 400;
+
   font-size: 2rem;
 }
 
