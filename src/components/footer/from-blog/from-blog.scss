@@ -1,34 +1,35 @@
+// Link block
+$from-blog-top-margin-bottom: 2.1rem;
+
+// Link block tweet
+$from-blog-tweet-margin-bottom: 2.5rem;
+$from-blog-title-margin-bottom: -0.5rem;
+$from-blog-data-margin-bottom: 0.5rem;
+$from-blog-msg-margin-bottom: 0.7rem;
+
+
 .from-blog {
-    margin: 2.2rem 0;
+    margin: $from-blog-top-margin-bottom 0;
 
     &__tweet {
-        margin: 2.5rem 0;
-
+        margin-bottom: $from-blog-tweet-margin-bottom;
 
         &__title {
-            @include font-styles($base-font-family, 2.3rem, 0.08rem, none, #7e7e7e);
-            line-height: 2.3rem;
+            @include font-styles($base-font-family, 2.3rem, 0.08rem, none, $gray-8);
+            margin-bottom: $from-blog-title-margin-bottom;
         }
     
         &__data {
-            @include font-styles($base-font-family, 1.2rem, 0.18rem, none, #7e7e7e);
-            line-height: 2rem;
+            @include font-styles($base-font-family, 1.2rem, 0.18rem, none, $gray-8);
+            margin-bottom: $from-blog-data-margin-bottom;
         }
 
         &__msg {
-            @include font-styles($base-font-family, 1.8rem, 0.05rem, none, #afafaf);
-            line-height: 2.5rem;
+            @include font-styles($base-font-family, 1.8rem, 0.05rem, none, $gray-7);
+            line-height: 2.65rem;
+            margin-bottom: $from-blog-msg-margin-bottom;
         }
-    
-        & a {
-            @include font-styles($base-font-family, 1.8rem, 0.05rem, none, red);
-            line-height: 2.9rem;
-            text-decoration: none;
-    
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+        
     }
 
 }

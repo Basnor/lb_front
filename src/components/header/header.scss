@@ -14,10 +14,10 @@ $header-border-top: 6px solid $gray-9;
     justify-content: space-between;
     align-items: center;
 
+    z-index: 1;
+
     background-color: $header-background-color;
     border-top: $header-border-top;
-
-    z-index: 1;
 
     &__label {
         display: inline-block;

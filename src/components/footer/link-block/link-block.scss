@@ -1,5 +1,14 @@
+// Link block
+$link-block-top-bottom-margin: 1.4rem;
+
+// Link block items
+$link-block-mark: "\00BB";
+$link-block-margin-from-mark: 0.8rem;
+$link-block-padding-bottom: 0.5rem;
+$link-block-padding-top: 0.8rem;
+
 .link-block {
-    margin: 1.5rem 0;
+    margin: $link-block-top-bottom-margin 0;
 
     &__items {
         list-style: none;
@@ -7,20 +16,20 @@
 
     &__items > li {
         display: block;
-        border-bottom: 1px solid #bebebe;
-        padding-bottom: 0.5rem;
-        padding-top: 1rem;
+        border-bottom: 1px solid $gray-6;
+        padding-bottom: $link-block-padding-bottom;
+        padding-top: $link-block-padding-top;
 
         &:before {
-            content: "\00BB";
-            @include font-styles($base-font-family, 1.8rem, 0.05rem, none, #7e7e7e);
+            content: $link-block-mark;
+            @include font-styles($base-font-family, 1.8rem, 0.05rem, none, $gray-7);
         }
     }
 
     & > ul > li > a {
-        @include font-styles($base-font-family, 1.8rem, 0.05rem, none, red);
+        @include font-styles($base-font-family, 1.8rem, 0.05rem, none, $red);
         text-decoration: none;
-        margin-left: 0.8rem;
+        margin-left: $link-block-margin-from-mark;
         &:hover {
             text-decoration: underline;
         }

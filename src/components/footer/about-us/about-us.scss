@@ -1,28 +1,30 @@
+// About us
+$about-us-top-bottom-margin: 2.2rem;
+
+// About us description
+$about-us-desctiption-bottom: 1.0rem;
+$about-us-desctiption-top: 2.3rem;
+
+// About us img
+$about-us-img-width: 93%;
+
 .about-us {
-    margin: 2.2rem 0;
+    margin: $about-us-top-bottom-margin 0;
 
     &__desctiption {
-        @include font-styles($base-font-family, 1.8rem, 0.05rem, none, #afafaf);
-        line-height: 2.6rem;
-        padding-bottom: 1rem;
-        padding-top: 2.3rem;
+        @include font-styles($base-font-family, 1.8rem, 0.05rem, none, $gray-7);
+        line-height: 2.7rem;
+        
+        margin-bottom: $about-us-desctiption-bottom;
+        margin-top: $about-us-desctiption-top;
     }
 
     &__img img {
-        width: 100%;
+        width: $about-us-img-width;
         height: auto;
+        
         padding: 0.5rem;
-        border: 1px solid #afafaf;
-        margin-top: 0.5rem;
+        border: 1px solid $gray-7;
     }
-
-    & a {
-        @include font-styles($base-font-family, 1.8rem, 0.05rem, none, red);
-        line-height: 2.9rem;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+    
 }
