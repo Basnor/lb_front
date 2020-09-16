@@ -1,4 +1,34 @@
-mixin header({label = "default", description, links})
+mixin header()
+    -
+        const label = "Autonomous"
+        const description = "Free PSD <br>Website Template"
+        const links = [
+            {
+                name: 'Home',
+                href: 'home.html'
+            },
+            {
+                name: 'Style demo',
+                href: '#'
+            },
+            {
+                name: 'Full width',
+                href: '#'
+            },
+            {
+                name: 'Dropdown',
+                href: '#'
+            },
+            {
+                name: 'Portfolio',
+                href: '#'
+            },
+            {
+                name: 'Gallery',
+                href: '#'
+            }
+        ]
+
     header.header
         div
             p(class="header__label") !{label}

@@ -1,6 +1,9 @@
-//include ../about-us/about-us
+mixin footer()
+    -
+        const author = 'Copyright &copy; 2013 - All Rights Reserved - Domain Name'
+        const info = 'Template by OS Templates'
+        const extra = true
 
-mixin footer({author = "default", info = "default", extra=false})
     footer.footer
 
         if extra
