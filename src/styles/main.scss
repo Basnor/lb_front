@@ -41,6 +41,15 @@ p {
   font-size: 2rem;
 }
 
+/*p[lang="en"] {
+  color: green;
+}
+
+p[lang="ru"] {
+  color: blue;
+  font-size: 10rem;
+}*/
+
 .main-content {
   min-height: 60vh;
 
@@ -57,3 +66,22 @@ p {
 
   z-index: 2;
 }
+
+/*table {
+  border:  0.1rem solid #ccc;
+  border-spacing: 1rem;
+  table-layout: fixed;
+  width: 60rem;
+}
+
+th, td {
+  padding: 1rem;
+}
+
+tr:nth-child(even) {
+  background-color: #e495e4;
+}
+
+tr th {
+  background-color: $gray-5;
+}*/
