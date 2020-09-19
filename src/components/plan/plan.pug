@@ -1,0 +1,18 @@
+mixin plan({type = "small", label = "default", description = "default", contents})
+    .plan
+        p(class="plan__label") !{label}
+        p(class="plan__description") !{description}
+
+    each content in contents
+        .plan
+            if (type == "small")
+                - const {content_name, content_path, content_description} = content
+                span(class="plan__label plan__label-red") !{content_name}
+                p(class="plan__description")
+                    img(src=content_path)
+                    | !{content_description}
+            if (type == "mid")
+                - const {content_link, content_path, content_description} = content
+                    img(src=content_path)
+                    p(class="plan__description") !{content_description}
+                    a(href=content_link) View This Project &raquo;

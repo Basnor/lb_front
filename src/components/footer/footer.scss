@@ -28,15 +28,6 @@ $footer-info-padding: 2.8rem;
         @include font-styles($base-font-family, 1.8rem, -0.05rem, uppercase, $gray-8);
     }
 
-    & a {
-        @include font-styles($base-font-family, 1.8rem, 0.05rem, none, $red);
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
     &__content {
         display: flex;
         justify-content: space-between;

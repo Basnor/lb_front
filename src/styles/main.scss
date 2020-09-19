@@ -14,74 +14,92 @@
 @import "../components/footer/from-blog/from-blog.scss";
 @import "../components/footer/about-us/about-us.scss";
 @import "../components/footer/contact-us/contact-us.scss";
+@import "../components/plan/plan.scss";
 
 // Styles for page
 @import "../views/home/palette.scss";
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  /* 1rem = 10px */
-  font-size: 62.5%;
+    /* 1rem = 10px */
+    font-size: 62.5%;
 }
 
 body {
-  background-color: #fff; 
-  min-height: 100vh;
+    background-color: #fff; 
+    min-height: 100vh;
 }
 
 p {
-  font-family: liberation-serif, serif;
-  font-style: normal;
-  font-weight: 400;
+    font-family: liberation-serif, serif;
+    font-style: normal;
+    font-weight: 400;
 
-  font-size: 2rem;
+    font-size: 2rem;
+}
+
+a {
+    @include font-styles($base-font-family, 1.8rem, 0.05rem, none, $red);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 /*p[lang="en"] {
-  color: green;
+    color: green;
 }
 
 p[lang="ru"] {
-  color: blue;
-  font-size: 10rem;
+    color: blue;
+    font-size: 10rem;
 }*/
 
 .main-content {
-  min-height: 60vh;
+    min-height: 60vh;
 
-  margin-left: 2.6rem;
-  margin-right: 2.6rem;
-  margin-top: -10rem;
+    margin-left: 2.6rem;
+    margin-right: 2.6rem;
+    margin-top: -10rem;
 
-  padding: 2.6rem;
+    padding: 2.6rem;
 
-  position: relative;
+    position: relative;
 
-  border-radius: 1rem;
-  background-color: #fff;
+    border-radius: 1rem;
+    background-color: #fff;
 
-  z-index: 2;
+    z-index: 2;
+}
+
+.wrapper {
+    padding: 1.5rem;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    align-items: start;
 }
 
 /*table {
-  border:  0.1rem solid #ccc;
-  border-spacing: 1rem;
-  table-layout: fixed;
-  width: 60rem;
+    border:  0.1rem solid #ccc;
+    border-spacing: 1rem;
+    table-layout: fixed;
+    width: 60rem;
 }
 
 th, td {
-  padding: 1rem;
+    padding: 1rem;
 }
 
 tr:nth-child(even) {
-  background-color: #e495e4;
+    background-color: #e495e4;
 }
 
 tr th {
-  background-color: $gray-5;
+    background-color: $gray-5;
 }*/
