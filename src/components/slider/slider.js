@@ -3,10 +3,10 @@ let buttonLeft = document.getElementById('slideLeft');
 
 buttonLeft.addEventListener('click', function(){
     document.getElementById('slider').scrollLeft -= 220
-    console.log('left')
+    //console.log('left')
 })
 
 buttonRight.addEventListener('click', function(){
     document.getElementById('slider').scrollLeft += 220
-    console.log('right')
+    //console.log('right')
 })

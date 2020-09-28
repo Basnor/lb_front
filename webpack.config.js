@@ -58,6 +58,13 @@ const plugins = () => {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'src/index.pug',
+            chunks: ['main'],
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'home.html',
+            template: 'src/views/home/index.pug',
+            chunks: ['home'],
             inject: true
         }),
         new MiniCssExtractPlugin({
@@ -66,6 +73,7 @@ const plugins = () => {
         new CopyWebpackPlugin({
             patterns: [
                 { from: './src/assets/img', to: 'assets/img' },
+                { from: './src/favicons', to: 'favicons' },
             ],
         }),
         ...pages('home')
@@ -84,11 +92,12 @@ function pages() {
 const config = {
     mode: 'development',
     entry: {
-        main: './src/app.js'
+        main: './src/app.js',
+        home: './src/components/slider/slider.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].bundle.js'
+        filename: 'js/[name].bundle.js'
     },
     resolve: {
         modules: [path.resolve(__dirname, '/src'), 'node_modules'],
