@@ -1,39 +1,36 @@
-.wrapper-slider__btn {
-    justify-self: end;
-}
+.wrapper-slider {
+    &__btn {
+        justify-self: end;
 
-.slide__arrow_l {
-    width: 2.5rem;
-    height: auto;
+        & .slide__arrow_l {
+            width: 2.5rem;
+            height: auto;
+        
+            margin-right: 0.5rem;
+            
+            cursor: pointer;
+            transition: .3s;
+            transform: rotate(180deg);
+        }
+        
+        & .slide__arrow_r {
+            width: 2.5rem;
+            height: auto;
+            cursor: pointer;
+            transition: .3s;
+        }
+    }
 
-    margin-right: 0.5rem;
+    .slide__img {
+        min-width: 30rem;
+        margin: 1rem;
+    }
     
-	cursor: pointer;
-    transition: .3s;
-    transform: rotate(180deg);
-}
-
-.slide__arrow_r {
-    width: 2.5rem;
-    height: auto;
-	cursor: pointer;
-    transition: .3s;
-}
-
-.slide__img {
-    //width: 40rem;
-    margin: 1rem;
-
+    #slider {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
 
 }
 
-img {
-    width: 50rem;
-    height: auto;
-}
-
-#slider {
-	display: flex;
-	flex-wrap: nowrap;
-    overflow-x: hidden;
-}
