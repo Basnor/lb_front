@@ -22,7 +22,6 @@
     }
 
     .slide__img {
-        min-width: 30rem;
         margin: 1rem;
     }
     
@@ -34,3 +33,14 @@
 
 }
 
+@media (max-width: 48rem) {
+    .slide__img {
+        min-width: 22rem;
+    }
+}
+
+@media (min-width: 48.1rem) {
+    .slide__img {
+        min-width: 30rem;
+    }
+}
