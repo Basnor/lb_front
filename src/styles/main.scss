@@ -15,6 +15,7 @@
 @import "../components/footer/about-us/about-us.scss";
 @import "../components/footer/contact-us/contact-us.scss";
 @import "../components/plan/plan.scss";
+@import "../components/slider/slider.scss";
 
 // Styles for page
 @import "../views/home/palette.scss";
@@ -78,11 +79,23 @@ p[lang="ru"] {
 }
 
 .wrapper {
-    padding: 1.5rem;
+
+    position: relative;
+
+    padding: 7rem 1.5rem;
     display: grid;
     grid-gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     align-items: start;
+
+    &-bordered {
+        border-top: 2px solid $gray-7;
+    }
+
+    &-slider {
+        grid-template-columns: minmax(20rem, 1fr);
+        padding: 0 1.5rem;
+    }
 }
 
 /*table {
