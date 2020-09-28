@@ -18,7 +18,7 @@
 @import "../components/slider/slider.scss";
 
 // Styles for page
-@import "../views/home/palette.scss";
+@import "../views/home/home.scss";
 
 * {
     margin: 0;
@@ -79,7 +79,6 @@ p[lang="ru"] {
 }
 
 .wrapper {
-
     position: relative;
 
     padding: 7rem 1.5rem;
@@ -95,6 +94,26 @@ p[lang="ru"] {
     &-slider {
         grid-template-columns: minmax(20rem, 1fr);
         padding: 0 1.5rem;
+    }
+
+    &-linked {
+        padding: 0 1.5rem;
+
+        &__social img {
+            width: 4rem;
+            height: auto;
+            margin-right: 2rem;
+        }
+
+        &__totop {
+            justify-self: end;
+
+            & img {
+                width: 6rem;
+                height: auto;
+                transform: rotate(-90deg);
+            }
+        }
     }
 }
 

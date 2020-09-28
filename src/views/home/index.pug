@@ -1,8 +1,7 @@
 doctype html
 html(lang="en")
     include /head/head
-    body
-
+    body(id="link-top")
         include /header/header
         +header()
 
@@ -70,6 +69,20 @@ html(lang="en")
                         }
                     ]
                 })
+
+            .wrapper.wrapper-linked
+                .wrapper-linked__social 
+                    a(href='#')
+                        img(src='./assets/img/circle.svg')
+                    a(href='#')
+                        img(src='./assets/img/circle.svg')
+                    a(href='#')
+                        img(src='./assets/img/circle.svg')
+                    a(href='#')
+                        img(src='./assets/img/circle.svg')
+                .wrapper-linked__totop
+                    a(href='#link-top')
+                        img(src='./assets/img/arrow.png')
 
 
             //img(src="./assets/img/default_slide_img.png")

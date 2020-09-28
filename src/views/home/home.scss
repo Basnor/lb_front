@@ -1,0 +1,55 @@
+.main-content {
+    min-height: 60vh;
+
+    margin-left: 2.6rem;
+    margin-right: 2.6rem;
+    margin-top: -10rem;
+
+    padding: 2.6rem;
+
+    position: relative;
+
+    border-radius: 1rem;
+    background-color: #fff;
+
+    z-index: 2;
+}
+
+.wrapper {
+    position: relative;
+
+    padding: 7rem 1.5rem;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    align-items: start;
+
+    &-bordered {
+        border-top: 2px solid $gray-7;
+    }
+
+    &-slider {
+        grid-template-columns: minmax(20rem, 1fr);
+        padding: 0 1.5rem;
+    }
+
+    &-linked {
+        padding: 0 1.5rem;
+
+        &__social img {
+            width: 4rem;
+            height: auto;
+            margin-right: 2rem;
+        }
+
+        &__totop {
+            justify-self: end;
+
+            & img {
+                width: 6rem;
+                height: auto;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}
